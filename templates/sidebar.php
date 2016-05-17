@@ -1,4 +1,4 @@
-<?php include ('header.php'); ?>
+
 
 <div class="overall-sidebar">
 
@@ -8,8 +8,8 @@
       <a href="http://www.newyorker.com/humor/borowitz-report">Borrowitz Report</a>.
     </p>
     <ul class="links">
-      <li><a href="index.php">Home</a></li>
-      <li><a href="about.php">About</a></li>
+      <li class="link-text"><a href="index.php">Home</a></li>
+      <li class="link-text"><a href="about.php">About</a></li>
     </ul>
   </div>
 
@@ -20,5 +20,3 @@
   </div>
 
 </div>
-
-<?php include ('footer.php'); ?>

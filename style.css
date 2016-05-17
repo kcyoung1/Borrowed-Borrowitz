@@ -1,4 +1,5 @@
 /*OVERALL*/
+
 body {
   font-family: 'Roboto', sans-serif;
   width: 1000px;
@@ -8,7 +9,10 @@ body {
   font-weight: 400;
   margin: 0 auto;
   background:
-
+  linear-gradient( to bottom,
+      rgba(255, 255, 255, 0.6) 100%,
+      rgba(255, 255, 255, 0.6)
+      0%),
   url(images/white-brick.jpg) center center;
 }
 ul {
@@ -16,6 +20,15 @@ ul {
 }
 li {
   list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(1, 170, 144);
+}
+a:hover{
+  color: white;
 }
 
 /*SIDE BAR*/
@@ -47,6 +60,21 @@ li {
 }
 .links {
   line-height: 2;
+
+}
+.link-text {
+  color: white;
+  background: rgba(87, 96, 93, 0.65);
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.link-text a:visited {
+  color: white;
+}
+.link-text a:hover {
+  color: rgb(1, 170, 144);
 }
 
 /*INDEX*/

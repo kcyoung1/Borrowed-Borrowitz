@@ -3,21 +3,28 @@
 
 <div class="home">
   <?php require('lib/functions.php');
-        all_posts('data/posts.json');
+        sort_date('data/posts.json');
 
-        $posts = all_posts();
+        $posts = sort_date();
 
-        foreach ($posts as $post) {
-          echo "<h2 class=\"container title\">{$post['title']}</h2>";
+  foreach ($posts as $post) : ?>
+    <h2 class="container title">
+      <?php echo $post['title']; ?>
+    </h2>
+    <p class="container date">
+      <?php echo date("F j, Y" , $post['post_date']); ?>
+    </p>
+    <p class="container author">
+      <?php   echo 'by ' . $post['author']; ?>
+    </p>
+    <p class="container content">
+      <?php echo $post['content']; ?>
+    </p>
+    <p class="bold">Categorized in: </p><p class="container category"> 
+      <?php echo implode(", " , $post['category']); ?>
+    </p><hr/>
+  <?php Endforeach; ?>
 
-          $new_date = date("F j, Y" , $post['post_date']);
-          echo "<p class=\"container date\">$new_date</p>";
-
-          echo "<p class=\"container author\">{$post['author']}</p>";
-          echo "<p class=\"container content\">{$post['content']}</p>";
-          echo "<p class=\"bold\">Categorized in: </p><p class=\"container category\">" . implode(", " , $post['category']) . "</p><hr/>";
-        }
-        ?>
 </div>
 
 <?php include ('templates/footer.php'); ?>
