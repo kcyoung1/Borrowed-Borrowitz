@@ -1,5 +1,3 @@
-
-
 <div class="overall-sidebar">
 
   <div class="sidebar">

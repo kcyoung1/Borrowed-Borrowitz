@@ -8,7 +8,7 @@ function all_posts() {
 function sort_date() {
   $data = all_posts();
   usort($data, function($a, $b) {
-    return $a['post_date'] - $b['post_date'];
+    return $b['post_date'] - $a['post_date'];
   });
   return $data;
 }

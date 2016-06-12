@@ -1,5 +1,6 @@
-<?php include ('templates/header.php'); ?>
-<?php include ('templates/sidebar.php'); ?>
+<?php include ('templates/header.php');
+      include ('templates/sidebar.php');
+?>
 
 <div class="home">
   <?php require('lib/functions.php');
@@ -15,12 +16,12 @@
       <?php echo date("F j, Y" , $post['post_date']); ?>
     </p>
     <p class="container author">
-      <?php   echo 'by ' . $post['author']; ?>
+      by <?php   echo $post['author']; ?>
     </p>
     <p class="container content">
       <?php echo $post['content']; ?>
     </p>
-    <p class="bold">Categorized in: </p><p class="container category"> 
+    <p class="bold">Categorized in: </p><p class="container category">
       <?php echo implode(", " , $post['category']); ?>
     </p><hr/>
   <?php Endforeach; ?>

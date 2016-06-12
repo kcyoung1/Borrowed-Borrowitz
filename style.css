@@ -24,12 +24,6 @@ li {
 a {
   text-decoration: none;
 }
-a:visited {
-  color: rgb(1, 170, 144);
-}
-a:hover{
-  color: white;
-}
 
 /*SIDE BAR*/
 
@@ -46,6 +40,12 @@ a:hover{
 .footer {
   bottom: 0;
   position: fixed;
+}
+a:visited {
+  color: rgb(1, 170, 144);
+}
+a:hover{
+  color: white;
 }
 
 
